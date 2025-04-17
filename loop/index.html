@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form" onsubmit=formVal()>
+       <div>
+        <label for="uname">Use Name :-</label>
+        <input type="text" id="uname" name="uname" onclick="">
+        <p id="error1"></p>
+
+       </div>
+       <div>
+        <label for="pass">password :-</label>:-</label>
+        <input type="password" id="pass" name="password" onclick="">
+        <p id="error2"></p>
+       </div>
+       <div>
+        <label for="email">E-mail :-</label>
+        <input type="text" id="email" name="email" onclick="">
+        <p id="error3"></p>
+       </div>
+       <button id="btn">Submit</button>
+    </form>
+    <script>
+        let username = document.getElementById("uname")
+        let password = document.getElementById("pass")
+        let email= document.getElementById("email")
+        let error1 = document.getElementById("error1")
+        let error2 = document.getElementById("error2")
+        let error3 =document.getElementById("error3")
+        let button = document.getElementById("btn")
+
+        function formVal(){
+            if(username.value === ""){
+                error1.innerText = "please enter a valid username"
+            }
+            else {
+                error1.innerText = ""
+            }
+            if(password.value ===""){
+                error2.innerText = "please enter valid password"
+            }
+            else{
+                error2.innerText = ""
+            }
+            if(emaail.value = ""){
+                error3.innerText = "please enter valid email"
+            }
+            else{
+                error3.innerText =""
+            }
+
+
+        }
+    </script>
+</body>
+</html>
